@@ -1,0 +1,43 @@
+pip install flask
+C:\Users\maxte\AppData\Local\Python\pythoncore-3.14-64\python.exe -m pip install flask
+pip show flask
+
+
+1. Crear entorno virtual (RECOMENDADO)
+python -m venv venv
+venv\Scripts\actívate
+
+2. Instalar todo limpio:
+pip install flask pandas scikit-learn matplotlib numpy
+
+
+3. Crear archivo profesional de dependencias
+flask
+pandas
+scikit-learn
+matplotlib
+numpy
+gunicorn
+
+4. Instalar desde archivo (como un pro)
+pip install -r requirements.txt
+
+Resultado final
+Después de esto:
+✅ No más errores de librerías
+✅ Entorno limpio
+✅ Proyecto listo para producción
+✅ Nivel ingeniero real
+
+
+Crear El cerebro de entrenamiento:
+train_model.py
+
+python train_model.py
+
+Resultado esperado:
+modelo.pkl
+
+
+
+
