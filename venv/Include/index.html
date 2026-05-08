@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>IA Predictiva - Deserción</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #007bff, #6c5ce7);
+            color: white;
+        }
+        .card {
+            border-radius: 15px;
+        }
+        .resultado {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container mt-5">
+    <div class="card p-4 shadow">
+
+        <h2 class="text-center text-dark">Sistema de Predicción IA</h2>
+
+        <form method="POST">
+
+            <div class="mb-3">
+                <label class="form-label text-dark">Horas de estudio</label>
+                <input type="number" name="horas" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label text-dark">Promedio</label>
+                <input type="number" step="0.1" name="promedio" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label text-dark">Materias perdidas</label>
+                <input type="number" name="materias" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label text-dark">Edad</label>
+                <input type="number" name="edad" class="form-control" required>
+            </div>
+
+            <button class="btn btn-primary w-100">Predecir</button>
+        </form>
+
+        {% if resultado %}
+            <div class="mt-4 text-center">
+                <p class="resultado text-dark">{{ resultado }}</p>
+            </div>
+        {% endif %}
+
+        {% if grafico %}
+    <div class="mt-4 text-center">
+        <img src="{{ grafico }}" class="img-fluid" alt="Gráfica">
+    </div>
+{% endif %}
+
+    </div>
+</div>
+
+</body>
+</html>
